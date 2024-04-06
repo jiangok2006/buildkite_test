@@ -9,7 +9,6 @@ resource "oci_bastion_bastion" "demo_bastionsrv" {
   name         = "demobastionsrv"
 }
 
-
 resource "oci_bastion_session" "demo_bastionsession" {
   bastion_id   = oci_bastion_bastion.demo_bastionsrv.id
   defined_tags = var.network_defined_tags
