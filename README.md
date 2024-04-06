@@ -11,8 +11,9 @@ Github action ->
 2. build docker images and push to gh docker registry.
 
 
-https://registry.terraform.io/modules/oracle-terraform-modules/base/oci/latest/examples/database
+I don't need bastion host in [OCI base module](https://github.com/oracle-terraform-modules/terraform-oci-base/blob/main/docs/quickstart.adoc). I will use the free OCI bastion service instead.
 
+https://martincarstenbach.com/2021/11/12/create-an-oci-bastion-service-via-terraform/
 
 
 use buildkite (for better visibility) to install below on vm:
