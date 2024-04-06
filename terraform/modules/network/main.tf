@@ -37,7 +37,7 @@ resource "oci_core_security_list" "private_sl" {
     destination      = var.private_sn_cidr_block
     protocol         = "6"
     description      = "SSH outgoing"
-    destination_type = ""
+    destination_type = "CIDR_BLOCK"
     stateless        = false
     tcp_options {
       max = 22

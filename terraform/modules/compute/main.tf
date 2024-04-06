@@ -1,4 +1,10 @@
 resource "oci_core_instance" "private_instance" {
+  shape = var.instance_shape
+  shape_config {
+    memory_in_gbs = var.instance_shape_config_memory_in_gbs
+    ocpus         = var.instance_shape_config_ocpus
+  }
+
   agent_config {
     is_management_disabled = false
     is_monitoring_disabled = false
