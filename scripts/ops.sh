@@ -13,10 +13,11 @@ cleanup() {
 
 apply_all() {
     cd $PROJECT_HOME
-    echo "Y" | terragrunt apply-all
+    cleanup # required for "Changes to backend configurations require reinitialization"
+    echo "Y" | terragrunt run-all apply
 }
 
 destroy_all() {
     cd $PROJECT_HOME
-    echo "Y" | terragrunt destroy-all
+    echo "Y" | terragrunt run-all destroy
 }
