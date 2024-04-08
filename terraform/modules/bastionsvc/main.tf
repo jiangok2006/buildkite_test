@@ -5,13 +5,11 @@ resource "oci_bastion_bastion" "demo_bastionsrv" {
   client_cidr_block_allow_list = [
     var.local_laptop_id
   ]
-  defined_tags = var.network_defined_tags
-  name         = "demobastionsrv"
+  name = "demobastionsrv"
 }
 
 resource "oci_bastion_session" "demo_bastionsession" {
-  bastion_id   = oci_bastion_bastion.demo_bastionsrv.id
-  defined_tags = var.network_defined_tags
+  bastion_id = oci_bastion_bastion.demo_bastionsrv.id
   key_details {
     public_key_content = var.ssh_bastion_key
   }

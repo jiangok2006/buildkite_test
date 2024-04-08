@@ -10,7 +10,3 @@ variable "ssh_bastion_key" {
   type = string
 }
 
-variable "network_defined_tags" {
-  type    = string
-  default = ["medusa"]
-}
